@@ -177,3 +177,318 @@ The four-bar link mechanism shown **Figure 7** in consists of three links, link 
 Before carrying out the simulation, a mathematical model of the system needs to be developed.
 
 The parameters given of the four-bar link system are the following:
+
+
+|     LINK    |     MASS (kg)    |     LENGTH (mm)    |     INERTIA(Kg.m2)    |     rG (mm)    |
+|-------------|------------------|--------------------|-----------------------|----------------|
+|     AB      |     0.2          |     10             |     0.00001           |     5          |
+|     BC      |     0.4          |     35             |     0.004             |     17.5       |
+|     CD      |     0.4          |     20             |     0.00008           |     15         |
+|     DA      |     -            |     30             |     -                 |     -          |
+
+**Table 1**: Tables of parameters for the four-bar linked mechanism
+
+A mathematical analysis will be performed to obtain equations that describe the system.
+
+#### The Position Analysis
+
+𝑟1𝑐𝑜𝑠𝜃1 + 𝑟2𝑐𝑜𝑠𝜃2 + 𝑟3𝑐𝑜𝑠𝜃3 + 𝑟4𝑐𝑜𝑠𝜃4 = 0
+
+𝑟1 sin 𝜃1 + 𝑟2𝑠𝑖𝑛𝜃2 + 𝑟3𝑠𝑖𝑛𝜃3 + 𝑟4𝑠𝑖𝑛𝜃4 = 0
+
+Since 4 = 180:
+
+𝑐𝑜𝑠𝜃4 = −1 and 𝑠𝑖𝑛𝜃4 = 0
+
+Giving the equations:
+
+𝑟2𝑐𝑜𝑠𝜃2 = 𝑟4 = 𝑟4 − (𝑟1𝑐𝑜𝑠𝜃1 + 𝑟3𝑐𝑜𝑠𝜃3)
+
+𝑟2𝑠𝑖𝑛𝜃2 = −(𝑟1 sin 𝜃1 + 𝑟3sin 𝜃3)
+
+By squaring and adding up both sides of the equations, the following equations are obtained:
+
+𝑟2 2 = 𝑟4 2 − 2𝑟4(𝑟1𝑐𝑜𝑠𝜃1 + 𝑟3𝑐𝑜𝑠𝜃3) +(𝑟1𝑐𝑜𝑠𝜃1 + 𝑟3𝑐𝑜𝑠𝜃3 ) 2
+
+𝑟2 2 = 𝑟4 2 − 2𝑟1𝑟4 cos 𝜃1 − 2𝑟3𝑟4𝑐𝑜𝑠𝜃3 + 𝑟1 2 𝑐𝑜𝑠 2𝜃1 + 2𝑟1𝑟3𝑐𝑜𝑠𝜃1𝑐𝑜𝑠𝜃3 + 𝑟3 2 cos2 𝜃3 + 𝑟1 2 𝑐𝑜𝑠 2𝜃1 + 2𝑟1𝑟3𝑠𝑖𝑛𝜃1𝑠𝑖𝑛𝜃3 + 𝑟3 2 sin2 𝜃3
+
+Therefore: 
+
+𝐴 cosθ3 + 𝐵 𝑠𝑖𝑛𝜃3 = 𝐶
+
+Where:
+
+𝐴 = 𝑐𝑜𝑠𝜃1 − ( 𝑟4 𝑟1 )
+
+𝐵 = 𝑠𝑖𝑛𝜃1
+
+𝐶 = ( 𝑟4 𝑟3 ) 𝑐𝑜𝑠𝜃1 − (𝑟1 2 − 𝑟2 2 + 𝑟3 2 + 𝑟4 2 ) (2𝑟1𝑟3)
+
+With the solution to equation being:
+
+𝜃3 ± 𝑎𝑡𝑎𝑛2(𝐵, 𝐴) + 𝑎𝑡𝑎𝑛2 ((± √1 − [( 𝐶 𝑅 ) 2 ]), 𝐶 𝑅 )
+
+Where: 
+
+𝑅 = √𝐴2 + 𝑏 2
+
+#### Link Position 
+
+For MATLAB to be able to produce results the XY position of each link needs to be calculated.
+Link AB:
+
+𝑥𝑔1 = 𝑟𝑔1 𝑐𝑜𝑠𝜃1
+
+𝑦𝑔1 = 𝑟𝑔1 𝑠𝑖𝑛𝜃1
+
+Link BC:
+
+𝑥𝑔2 = 𝑟1 cos 𝜃1 + 𝑟𝑔2 𝑐𝑜𝑠𝜃2
+
+𝑦𝑔2 = 𝑟1𝑠𝑖𝑛𝜃1 + 𝑟𝑔2 𝑠𝑖𝑛𝜃2
+
+Link CD:
+
+𝑥𝑔3 = 𝑟4 − (𝑟3 − 𝑟𝑔3 ) 𝑐𝑜𝑠𝜃3
+
+𝑦𝑔3 = − (𝑟3 − 𝑟𝑔3 ) 𝑠𝑖𝑛𝜃3
+
+#### The Velocity analysis
+
+To analyse the angular velocity to the derivative of Equation 3 and Equation 4 are carried out, giving the following:
+
+𝜃̇ 3 = 𝜃̇ 1 = 𝑟1 sin(𝜃1 − 𝜃2) 𝑟3sin(𝜃2 − 𝜃3)
+
+𝜃̇ 2 = 𝜃̇ 1 = 𝑟1 sin(𝜃3 − 𝜃1 𝑟2sin(𝜃2 − 𝜃3)
+
+#### The Acceleration Analysis
+
+To calculate the angular acceleration, the derivative of the equations above in the velocity analysis can be taken to obtain:
+
+𝜃3 ̈ = 𝜃̇ 1 𝑟1 𝑟3 ̈ cos(𝜃1 − 𝜃2 ) sin(𝜃2 − 𝜃3 )(𝜃̇ 1 − 𝜃̇ 2) − sin(𝜃1 − 𝜃2 ) cos(𝜃2 − 𝜃3)(𝜃̇ 2 − 𝜃3) sin2(𝜃2 − 𝜃3 )
+
+𝜃2 ̈ = 𝜃̇ 1 𝑟1 𝑟2 ̈ cos(𝜃3 − 𝜃1 ) sin(𝜃2 − 𝜃3 )(𝜃̇ 3 − 𝜃̇ 1) − sin(𝜃3 − 𝜃1 ) cos(𝜃2 − 𝜃3)(𝜃̇ 2 − 𝜃3) sin2(𝜃2 − 𝜃3 )
+
+#### Centre of mass acceleration
+
+The force conditions on points A, B, C and D need to be calculated to obtain the centre of mass acceleration:
+
+𝑥̈𝑔1 = −𝑟𝑔1 (𝜃1 ̈ sin 𝜃1 + 𝜃1 ̇ ̈ 2 cos 𝜃1)
+
+𝑦̈𝑔1 = −𝑟𝑔1 (𝜃1 ̈ cos 𝜃1 + 𝜃1 ̇ 2 sin 𝜃1)
+
+𝑥̈𝑔2 = −𝑟1(𝜃1 ̈ cos 𝜃1 + 𝜃1 ̇ 2 cos 𝜃1) − 𝑟𝑔2(𝜃̈ 2 𝑠𝑖𝑛 𝜃2 + 𝜃1 ̇ 2 cos 𝜃2)
+
+𝑦̈𝑔2 = −𝑟1(𝜃1 ̈ cos 𝜃1 + 𝜃1 ̇ 2 sin 𝜃1) − 𝑟𝑔2(𝜃̈ 2 𝑐𝑜𝑠 𝜃2 + 𝜃1 ̇ 2 sin 𝜃2)
+
+𝑥̈𝑔3 = (𝑟3 − 𝑟𝑔3 )(𝜃̈ 3𝑠𝑖𝑛𝜃3 + 𝜃3 ̇ 2 𝑐𝑜𝑠𝜃3)
+
+𝑥̈𝑔3 = (𝑟3 − 𝑟𝑔3 )(𝜃̈ 3𝑠𝑖𝑛𝜃3 + 𝜃3 ̇ 2 𝑐𝑜𝑠𝜃3)
+
+#### Dynamic Analysis 
+
+The forces, as well as the torque acting in both the XY direction in links AB, BC, and CD need to be calculated individually to carry out a dynamic analysis.
+
+##### Dynamic analysis for link AB:
+
+![image](https://user-images.githubusercontent.com/73448401/99856299-92955300-2b80-11eb-9686-247bc59e2fd6.png)
+
+**Figure 8**: Link AB
+
+𝑋𝐴 + 𝑋𝐵 = 𝑚𝑥̈𝐺1
+
+𝑌𝐴 + 𝑌𝐵 = 𝑚1𝑦̈𝐺1
+
+𝑇𝑚 + 𝑋𝐴𝑟𝐺1 𝑠𝑖𝑛𝜃1 − 𝑌𝐴𝑟𝐺1 𝑐𝑜𝑠𝜃1 − 𝑋𝐵(𝑟1 − 𝑟𝐺1 )𝑠𝑖𝑛𝜃1 + 𝑌𝐵(𝑟1 − 𝑟𝐺1 )𝑐𝑜𝑠𝜃1 = 𝐼𝐺1 𝜃̈ 1
+
+##### Dynamic analysis for link BC:
+
+![image](https://user-images.githubusercontent.com/73448401/99856304-94f7ad00-2b80-11eb-8522-68fdc204fcfd.png)
+ 
+**Figure 9**: Link BC
+
+−𝑋𝐵 + 𝑋𝐶 = 𝑚2𝑥̈𝐺2
+
+−𝑌𝐵 + 𝑌𝐶 = 𝑚2𝑦̈𝐺2
+
+−𝑋𝐵𝑟𝐺2 𝑠𝑖𝑛𝜃2 + 𝑌𝐵𝑟𝐺2 𝑐𝑜𝑠𝜃2 − 𝑋𝑐(𝑟2 − 𝑟𝐺2 )𝑠𝑖𝑛𝜃2 + 𝑌𝑐(𝑟2 − 𝑟𝐺2 )𝑐𝑜𝑠𝜃2 = 𝐼𝐺1 𝜃̈ 2
+
+##### Dynamic analysis for link CD:
+
+![image](https://user-images.githubusercontent.com/73448401/99856309-97f29d80-2b80-11eb-8bb2-8a16eb6dc156.png)
+ 
+**Figure 10**: Link CD
+
+−𝑋𝐶 + 𝑋𝐷 = 𝑚2𝑥̈𝐺3
+
+−𝑌𝐶 + 𝑌𝐷 = 𝑚2𝑦̈𝐺3
+
+−𝑇1 − 𝑋𝐶𝑟𝑔3 𝑠𝑖𝑛𝜃3 + 𝑌𝑐𝑟𝐺3𝑐𝑜𝑠𝜃3 − 𝑋𝐷 (𝑟3 − 𝑟𝑔3 ) 𝑠𝑖𝑛𝜃3 + 𝑌𝐷(𝑟3 − 𝑟𝐺3 )𝑠𝑖𝑛𝜃3 = 𝐼𝐺3 𝜃̈ 3
+
+#### Matrix
+
+Matrices can now be used to solve the dynamic equations used above. The matrix will be written in the form:
+
+[𝐴] 𝑋 [𝐵] = [X]
+
+Where:
+
+A= is the multiplying variable of the instantaneous geometry of the mechanism
+
+B= is the multiplying variable defines the velocity’s and acceleration links
+
+X= The sum of the multiplying variables A and B and where the plot for the MATLAB results will be obtained from.
+
+### MATLAB Code of Four-bar link
+
+#### Varable declaration
+```
+r1=0.01;
+r2=0.035;
+r3=0.02;
+r4=0.03;
+rg1=r1/2;
+rg2=r2/2;
+rg3=r3/2;
+
+ig1=0.00001;
+ig2=0.0004;
+ig3=0.00008;
+
+w1=100;
+
+m1=0.2;
+m2=0.6;
+m3=0.4;
+a1=0;
+i=0;
+
+for TH1=0:0.001:2*pi
+ A=cos(TH1)-(r4/r1);
+ B=sin(TH1);
+ C=(r4/r3)*cos(TH1)-((r1^2-r2^2+r3^2+r4^2)/(2*r1*r3));
+ R=sqrt(A^2+B^2);
+ Z=C/R;
+ zz=sqrt(1-Z^2);
+ i=i+1;
+ ```
+### Position analysis
+```
+TH3=atan2(B,A)+atan2(zz,Z);
+if TH3<0; TH3=TH3+2*pi;end
+
+TH3b=atan2(B,A)-atan2(zz,Z);
+if TH3b<0; TH3b=TH3b+2*pi;end
+
+TH2=atan2((-r3*sin(TH3)-r1*sin(TH1)),(r4-r3*cos(TH3)-r1*cos(TH1)));
+
+T1(i)=TH1; T2(i)=TH2; T3(i)=TH3; T3b(i)=TH3b;
+```
+### Velocity analysis
+```
+w3=w1*(r1*sin(TH1-TH2))/(r3*sin(TH2-TH3));
+w2=w1*(r1*sin(TH3-TH1))/(r2*sin(TH2-TH3));
+
+W3(i)=w3; W2(i)=w2;
+```
+### Acceleration analysis
+```
+a3=(w1^2*r1/r3)*((1-(w2/w1))*cos(TH1-TH2)*sin(TH2-TH3)-((w2/w1)-(w3/w1))*cos(TH2-TH3)*sin(TH1-TH2))/(sin(TH2-TH3))^2;
+a2=-(w1^2*r1/r2)*((1-(w3/w1))*cos(TH1-TH3)*sin(TH2-TH3)-((w2/w1)-(w3/w1))*cos(TH2-TH3)*sin(TH1-TH3))/(sin(TH2-TH3))^2;
+
+A3(i)=a3; A2(i)=a2;
+```
+### Acceleration G1,G2, G3
+```
+xg1= -rg1* (a1*sin(TH1) +w1^2*cos (TH1));
+yg1= rg1* (a1*cos (TH1) -w1^2*sin (TH1));
+
+xg2= -r1* (a1*sin (TH1) +w1^2*cos (TH1))- rg2* (a2*sin (TH2) +w2^2*cos(TH2));
+yg2= r1* (a1*cos (TH1) -w1^2*sin (TH1))+ rg2* (a2*cos (TH2)-w2^2*sin (TH2));
+
+xg3= (r3-rg3)*(a3*sin(TH3)+w3^2*cos(TH3));
+yg3= -(r3-rg3)*(a3*cos(TH3)-w3^2*sin(TH3));
+```
+#### Matrix
+
+Matrices can now be used to solve the dynamic equations used above. The matrix will be written in the form:
+
+[𝐴] 𝑋 [𝐵] = [X]
+
+Where:
+
+A= is the multiplying variable of the instantaneous geometry of the mechanism
+
+B= is the multiplying variable defines the velocity’s and acceleration links
+
+X= The sum of the multiplying variables A and B and where the plot for the MATLAB results will be obtained from.
+
+### Dynamic Analysis
+```
+A=[1 0 1 0 0 0 0 0 0;
+   0 1 0 1 0 0 0 0 0;
+   rg1*sin(TH1) -rg1*cos(TH1) -(r1-rg1)*sin(TH1) (r1-rg1)*cos(TH1) 0 0 0 0 1;
+   0 0 -1 0 1 0 0 0 0;
+   0 0 0 -1 0 1 0 0 0;
+   0 0 -rg2*sin(TH2) rg2*cos(TH2) -(r2-rg2)*sin(TH2) (r2-rg2)*cos(TH2) 0 0 0;
+   0 0 0 0 -1 0 1 0 0;
+   0 0 0 0 0 -1 0 1 0;
+   0 0 0 0 -rg3*sin(TH3) rg3*cos(TH3) -(r3-rg3)*sin(TH3) (r3-rg3)*cos(TH3) 0];
+
+
+B =[ m1*xg1;
+     m1*yg1;
+     ig1*a1;
+     m2*xg2;
+     m2*yg2;
+     ig2*a2;
+     m3*xg3;
+     m3*yg3;
+     ig3*a3];
+
+
+X=inv(A)*B ;
+XA (i)=X(1,1);
+YA (i)=X(2,1);
+XB (i)=X(3,1);
+YB (i)=X(4,1);
+XC (i)=X(5,1);
+YC (i)=X(6,1);
+XD (i)=X(7,1);
+YD (i)=X(8,1);
+TM (i)=X(9,1);
+```
+
+### NX modelling of Four bar link
+
+To create the four bar-linked mechanism for links part models shown in **Figure 11-Figure 14** had to be created in NX which would then be assembled into the mechanism
+ 
+![image](https://user-images.githubusercontent.com/73448401/99856897-eeaca700-2b81-11eb-9c0e-32c137320d53.png)
+
+**Figure 11**: Link AB part
+
+![image](https://user-images.githubusercontent.com/73448401/99856905-f409f180-2b81-11eb-998a-c3a4a4dca16a.png)
+
+**Figure 12**: Link AD part
+ 
+![image](https://user-images.githubusercontent.com/73448401/99856910-f9673c00-2b81-11eb-9f6b-84d26c4cb61d.png)
+
+**Figure 13**: Link BC part
+
+![image](https://user-images.githubusercontent.com/73448401/99856919-fff5b380-2b81-11eb-9658-e57873b5c614.png)
+
+**Figure 14**: Links CD part
+
+**Figure 15** shows the four-bar linked mechanism assembled and an emotion simulation. The joints parameters featured for each link have the appropriate features such as the revolute and the slider. Link AD simulated to be the ground and is set in an always stationary position. Link AB is the moving force and the mechanism and rotates counterclockwise at an angular velocity of 100 rads/s.
+
+![image](https://user-images.githubusercontent.com/73448401/99856922-03893a80-2b82-11eb-90f2-39f89614c44b.png)
+
+**Figure 15**: Completed assembly in motion simulation
+
+
+
+
+
+
+
+
