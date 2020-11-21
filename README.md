@@ -526,6 +526,6 @@ To create the four bar-linked mechanism for links part models shown in **Figure 
 
 **Figure 23**:Variation of motor torque
 
-**Figure 23** shows the four-bar mechanism motor torque variation.
+**Figure** above shows the variation when a torque is applied to joints A and B(see **Figure**).At each cycle of the mechanism there is an increase in the torque of the motor and the angular velocity is constant. As the link moves energy is stored in the link and when the energy generated from the torque of the motor is zero, the energy stored in the link returns to the motor and vice versa. This explains the fluctuation of the peaks shown for the torque above.
 
 
