@@ -1,3 +1,6 @@
+# Design-and-Analysis-of-2-and-4-bar-mechanisms
+
+This project consisted of using both MATLAB and Siemens NX  to carry out simulations of mechanism systems.
 
 - [What is this?](#what-is-this)
 - [Method](#method)
@@ -14,10 +17,6 @@
   * [MATLAB results for Four-bar link mechanism](#matlab-results-for-four-bar-link-mechanism)
   * [NX simulation results for Two bar link mechanism](#nx-simulation-results-for-two-bar-link-mechanism)
   * [NX simulation results for Four-bar link mechanism](#nx-simulation-results-for-four-bar-link-mechanism)
-
-# Design-and-Analysis-of-2-and-4-bar-mechanisms
-
-This project consisted of using both MATLAB and Siemens NX  to carry out simulations of mechanism systems.
 
 # What is this?
 
