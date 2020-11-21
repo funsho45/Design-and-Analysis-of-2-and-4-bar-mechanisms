@@ -536,7 +536,7 @@ To create the four bar-linked mechanism for links part models shown in **Figure 
 
 **Figure 22** above shows the variation when a torque is applied to joints *A* and *B*(see **Figure 8**).At each cycle of the mechanism there is an increase in the torque of the motor and the angular velocity is constant. As the link moves energy is stored in the link and when the energy generated from the torque of the motor is zero, the energy stored in the link returns to the motor and vice versa. This explains the fluctuation of the peaks shown for the torque above.
 
-## NX results for Two bar link mechanism
+## NX simulation results for Two bar link mechanism
 
 ![image](https://user-images.githubusercontent.com/73448401/99887259-c46af000-2c3a-11eb-9081-f08622908274.png)
 
@@ -544,7 +544,7 @@ To create the four bar-linked mechanism for links part models shown in **Figure 
 
 **Figure 23** shows the variation of the link angular velocity, and when compared to the results produced from the MATLAB plot, the results are the same except the that the angular velocity values are positive due to NX not providing negative values.
 
-## NX results for Four-bar link mechanism
+## NX simulation results for Four-bar link mechanism
 
 ![image](https://user-images.githubusercontent.com/73448401/99887271-db114700-2c3a-11eb-8336-d54624f4f1e4.png)
 
