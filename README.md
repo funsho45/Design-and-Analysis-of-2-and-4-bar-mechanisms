@@ -39,7 +39,7 @@ r2= Link AB length
 
 A mathematical analysis will be performed to obtain equations that describe the system.
 
-#### The Position Analysis
+### The Position Analysis
 
 For the closed loop OABC:
 
@@ -90,7 +90,7 @@ Where:
 **Equation 7**
 
 
-#### The Velocity Analysis
+### The Velocity Analysis
 
 The angular velocity can now be calculated using both **Equation 1** and **Equation 2** from above differentiating with respect to time:
 
@@ -100,7 +100,7 @@ dot_𝜃̇2 = 𝑢𝐵𝑐𝑜𝑠𝜃1 + 𝑣𝐵𝑠𝑖𝑛𝜃1/ 𝑟2 sin(�
 
 ### MATLAB Code of Two bar link
 
-#### Variable declaration
+### Variable declaration
 ```
 r1=0.3;
 r2=0.2;
@@ -118,7 +118,7 @@ for X=0.3:-0.003:0;
     zz=sqrt(1-(Z^2));
     i=i+1;
 ```
-#### Position Analysis
+### Position Analysis
 ```
 TH2=atan2(B,A)+atan2(zz,Z);
 if TH2<0; TH2=TH2+2*pi;end
@@ -129,7 +129,7 @@ if TH2b<0; TH2b=TH2b+2*pi;end
 TH1=atan2((Y-r2*sin (TH2)), (X-r2*cos (TH2)));
 T1(i)=TH1; T2(i)=TH2; T2b(i)=TH2b;
 ```
-#### Velocity analysis
+### Velocity analysis
 ```
 w1=((XB*cos (TH2)) + (YB*sin (TH2)))/(r1*sin (TH2-TH1));
 w2=((XB*cos (TH1)) + (YB*sin (TH1)))/(r2*sin (TH1-TH2));
@@ -198,7 +198,7 @@ The parameters given of the four-bar link system are the following:
 
 A mathematical analysis will be performed to obtain equations that describe the system.
 
-#### The Position Analysis
+### The Position Analysis
 
 𝑟1𝑐𝑜𝑠𝜃1 + 𝑟2𝑐𝑜𝑠𝜃2 + 𝑟3𝑐𝑜𝑠𝜃3 + 𝑟4𝑐𝑜𝑠𝜃4 = 0
 
@@ -240,7 +240,7 @@ Where:
 
 𝑅 = √𝐴2 + 𝑏 2
 
-#### Link Position 
+### Link Position 
 
 For MATLAB to be able to produce results the XY position of each link needs to be calculated.
 Link AB:
@@ -261,7 +261,7 @@ Link CD:
 
 𝑦𝑔3 = − (𝑟3 − 𝑟𝑔3 ) 𝑠𝑖𝑛𝜃3
 
-#### The Velocity analysis
+### The Velocity analysis
 
 To analyse the angular velocity to the derivative of Equation 3 and Equation 4 are carried out, giving the following:
 
@@ -269,7 +269,7 @@ To analyse the angular velocity to the derivative of Equation 3 and Equation 4 a
 
 𝜃̇ 2 = 𝜃̇ 1 = 𝑟1 sin(𝜃3 − 𝜃1 𝑟2sin(𝜃2 − 𝜃3)
 
-#### The Acceleration Analysis
+### The Acceleration Analysis
 
 To calculate the angular acceleration, the derivative of the equations above in the velocity analysis can be taken to obtain:
 
@@ -277,7 +277,7 @@ To calculate the angular acceleration, the derivative of the equations above in 
 
 𝜃2 ̈ = 𝜃̇ 1 𝑟1 𝑟2 ̈ cos(𝜃3 − 𝜃1 ) sin(𝜃2 − 𝜃3 )(𝜃̇ 3 − 𝜃̇ 1) − sin(𝜃3 − 𝜃1 ) cos(𝜃2 − 𝜃3)(𝜃̇ 2 − 𝜃3) sin2(𝜃2 − 𝜃3 )
 
-#### Centre of mass acceleration
+### Centre of mass acceleration
 
 The force conditions on points A, B, C and D need to be calculated to obtain the centre of mass acceleration:
 
@@ -293,11 +293,11 @@ The force conditions on points A, B, C and D need to be calculated to obtain the
 
 𝑥̈𝑔3 = (𝑟3 − 𝑟𝑔3 )(𝜃̈ 3𝑠𝑖𝑛𝜃3 + 𝜃3 ̇ 2 𝑐𝑜𝑠𝜃3)
 
-#### Dynamic Analysis 
+### Dynamic Analysis 
 
 The forces, as well as the torque acting in both the XY direction in links AB, BC, and CD need to be calculated individually to carry out a dynamic analysis.
 
-##### Dynamic analysis for link *AB*:
+### Dynamic analysis for link *AB*:
 
 ![image](https://user-images.githubusercontent.com/73448401/99856299-92955300-2b80-11eb-9686-247bc59e2fd6.png)
 
@@ -309,7 +309,7 @@ The forces, as well as the torque acting in both the XY direction in links AB, B
 
 𝑇𝑚 + 𝑋𝐴𝑟𝐺1 𝑠𝑖𝑛𝜃1 − 𝑌𝐴𝑟𝐺1 𝑐𝑜𝑠𝜃1 − 𝑋𝐵(𝑟1 − 𝑟𝐺1 )𝑠𝑖𝑛𝜃1 + 𝑌𝐵(𝑟1 − 𝑟𝐺1 )𝑐𝑜𝑠𝜃1 = 𝐼𝐺1 𝜃̈ 1
 
-##### Dynamic analysis for link *BC*:
+### Dynamic analysis for link *BC*:
 
 ![image](https://user-images.githubusercontent.com/73448401/99856304-94f7ad00-2b80-11eb-8522-68fdc204fcfd.png)
  
@@ -321,7 +321,7 @@ The forces, as well as the torque acting in both the XY direction in links AB, B
 
 −𝑋𝐵𝑟𝐺2 𝑠𝑖𝑛𝜃2 + 𝑌𝐵𝑟𝐺2 𝑐𝑜𝑠𝜃2 − 𝑋𝑐(𝑟2 − 𝑟𝐺2 )𝑠𝑖𝑛𝜃2 + 𝑌𝑐(𝑟2 − 𝑟𝐺2 )𝑐𝑜𝑠𝜃2 = 𝐼𝐺1 𝜃̈ 2
 
-##### Dynamic analysis for link *CD*:
+### Dynamic analysis for link *CD*:
 
 ![image](https://user-images.githubusercontent.com/73448401/99856309-97f29d80-2b80-11eb-8bb2-8a16eb6dc156.png)
  
@@ -333,7 +333,7 @@ The forces, as well as the torque acting in both the XY direction in links AB, B
 
 −𝑇1 − 𝑋𝐶𝑟𝑔3 𝑠𝑖𝑛𝜃3 + 𝑌𝑐𝑟𝐺3𝑐𝑜𝑠𝜃3 − 𝑋𝐷 (𝑟3 − 𝑟𝑔3 ) 𝑠𝑖𝑛𝜃3 + 𝑌𝐷(𝑟3 − 𝑟𝐺3 )𝑠𝑖𝑛𝜃3 = 𝐼𝐺3 𝜃̈ 3
 
-#### Matrix
+### MATRIX
 
 Matrices can now be used to solve the dynamic equations used above. The matrix will be written in the form:
 
