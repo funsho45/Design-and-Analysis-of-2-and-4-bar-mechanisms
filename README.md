@@ -1,4 +1,4 @@
-# Design and Analysis of 2 and 4 bar mechanisms
+# Design and Analysis of Two and 4 Four mechanisms
 
 This project consisted of using both MATLAB and Siemens NX  to carry out simulations of mechanism systems.
 
