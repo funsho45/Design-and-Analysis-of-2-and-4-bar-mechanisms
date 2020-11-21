@@ -485,7 +485,21 @@ To create the four bar-linked mechanism for links part models shown in **Figure 
 
 **Figure 15**: Completed assembly in motion simulation
 
+# Results
 
+## MATLAB results for Two bar link mechanism
+
+![image](https://user-images.githubusercontent.com/73448401/99860188-3fc09900-2b8a-11eb-8473-7355ae9f5ab4.png)
+
+**Figure 16**: Variation of link orientations
+
+**Figure 16** above shows variation of link orientation with the angle’s theta 1 and theta 2. It is seen that both angles are positive, as they rotate along the excesses in an anticlockwise direction. Theta one begins above -50 degrees and increases to an angle of approximately 50 degrees indicating a continuous upward direction. Theta two, on the other hand, starts in a positive position and begins to increase to points beyond 150 degrees steadily.
+
+![image](https://user-images.githubusercontent.com/73448401/99860194-451de380-2b8a-11eb-823e-c339de84433d.png)
+
+**Figure 17**: Variation of angular velocity
+
+**Figure 17** shows the variation of angular velocity for the 21. It is shown that the mega one begins a lower place than omega one at around 1 rad/sec, with omega two starting above 10 rad/sec. An increase in velocity is noticed in the second angle when in comparison to the first this is due to rapid acceleration. The first angular velocity has lower peak point in the second angular velocity, but the second angular velocity sees a sharp decrease of this peak is reached when compared to the first angular velocity.
 
 
 
