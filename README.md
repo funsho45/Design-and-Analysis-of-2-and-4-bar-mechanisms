@@ -17,7 +17,7 @@ This project consisted of using both MATLAB and Siemens NX  to carry out simulat
   * [MATLAB results for Four-bar link mechanism](#matlab-results-for-four-bar-link-mechanism)
   * [NX simulation results for Two bar link mechanism](#nx-simulation-results-for-two-bar-link-mechanism)
   * [NX simulation results for Four-bar link mechanism](#nx-simulation-results-for-four-bar-link-mechanism)
-
+- [Thoughts](#thoughts)
 # What is this?
 
 A constrained rigid body system, in which one of the bodies is in the frame is referred to as a mechanism. When considering a constrained rigid body system, the degrees of freedom of that mechanism is important. 
@@ -558,11 +558,16 @@ To create the four bar-linked mechanism for links part models shown in **Figure 
 
 ![image](https://user-images.githubusercontent.com/73448401/99887278-e5334580-2c3a-11eb-828f-69c60b576130.png)
 
-**Figure 26**:Polar load diagram results for joint C in NX
-
 **Figure 24-Figure 26** show a close resemblance to Figure 19-Figure 21, but the magnitudes shifted slightly indicating an orientation or fault during the NX modelling process.
+
+**Figure 26**:Polar load diagram results for joint C in NX
 
 ![image](https://user-images.githubusercontent.com/73448401/99887280-e8c6cc80-2c3a-11eb-8cf8-5cee41551dc1.png)
 
 **Figure 27**:Polar load diagram results for joint D in NX
+
+# Thoughts
+
+The simpler of the two methods was the modelling method using MATLAB. After creating the parts in NX and assembling it to create both the two bar and the four-bar mechanisms, setting up the joint parameters was fairly simple, but problems occurred during the orientation of the assembly during the motion simulation process this resulted in graphs that was similar compared to the MATLAB counterpart but was not correct.
+To conclude both methods (MATLAB and NX) were valuable for carrying out the dynamics and kinematic analysis of a mechanism.
 
