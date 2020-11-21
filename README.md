@@ -146,27 +146,35 @@ To create the two-bar link manipulator, assembly components with the appropriate
 
 ![image](https://user-images.githubusercontent.com/73448401/99854625-0d5c6f00-2b7d-11eb-9776-be0b9ff7409f.png)
 
+**Figure 2**
+
 #### Link OA
 
 ![image](https://user-images.githubusercontent.com/73448401/99854633-11888c80-2b7d-11eb-82a0-7afa834c8fcb.png)
+
+**Figure 3**
 
 #### Link AB
 
 ![image](https://user-images.githubusercontent.com/73448401/99854643-177e6d80-2b7d-11eb-9395-b4d254581273.png)
 
+**Figure 4**
+
 #### The Actuator
 
 ![image](https://user-images.githubusercontent.com/73448401/99854652-1f3e1200-2b7d-11eb-8be2-510a7ca041bd.png)
+
+**Figure 5**
 
 #### The completed assembly in a motion simulation
 
 ![image](https://user-images.githubusercontent.com/73448401/99854661-27964d00-2b7d-11eb-9d5b-5543e282546b.png)
 
-
+**Figure 6**
  
 ## Four bar link mechanism  
 
-The four-bar link mechanism shown **Figure 7** in consists of three links, link AB, BC, CD and DA which represents the ground. Link AB is driven by a motor with the torque force Tm starting the movement in the mechanism, CD then carries the load torque Tl. A counter-clockwise direction is taken in a horizontal axis to calculate the angles. 
+The four-bar link mechanism shown **Figure 7** in consists of three links, link *AB, BC, CD* and *DA* which represents the ground. Link *AB* is driven by a motor with the torque force Tm starting the movement in the mechanism, *CD* then carries the load torque Tl. A counter-clockwise direction is taken in a horizontal axis to calculate the angles. 
 
 ![image](https://user-images.githubusercontent.com/73448401/99855716-53b2cd80-2b7f-11eb-8c4b-f646eb2a0b0e.png)
 
@@ -289,7 +297,7 @@ The force conditions on points A, B, C and D need to be calculated to obtain the
 
 The forces, as well as the torque acting in both the XY direction in links AB, BC, and CD need to be calculated individually to carry out a dynamic analysis.
 
-##### Dynamic analysis for link AB:
+##### Dynamic analysis for link *AB*:
 
 ![image](https://user-images.githubusercontent.com/73448401/99856299-92955300-2b80-11eb-9686-247bc59e2fd6.png)
 
@@ -301,7 +309,7 @@ The forces, as well as the torque acting in both the XY direction in links AB, B
 
 𝑇𝑚 + 𝑋𝐴𝑟𝐺1 𝑠𝑖𝑛𝜃1 − 𝑌𝐴𝑟𝐺1 𝑐𝑜𝑠𝜃1 − 𝑋𝐵(𝑟1 − 𝑟𝐺1 )𝑠𝑖𝑛𝜃1 + 𝑌𝐵(𝑟1 − 𝑟𝐺1 )𝑐𝑜𝑠𝜃1 = 𝐼𝐺1 𝜃̈ 1
 
-##### Dynamic analysis for link BC:
+##### Dynamic analysis for link *BC*:
 
 ![image](https://user-images.githubusercontent.com/73448401/99856304-94f7ad00-2b80-11eb-8522-68fdc204fcfd.png)
  
@@ -313,7 +321,7 @@ The forces, as well as the torque acting in both the XY direction in links AB, B
 
 −𝑋𝐵𝑟𝐺2 𝑠𝑖𝑛𝜃2 + 𝑌𝐵𝑟𝐺2 𝑐𝑜𝑠𝜃2 − 𝑋𝑐(𝑟2 − 𝑟𝐺2 )𝑠𝑖𝑛𝜃2 + 𝑌𝑐(𝑟2 − 𝑟𝐺2 )𝑐𝑜𝑠𝜃2 = 𝐼𝐺1 𝜃̈ 2
 
-##### Dynamic analysis for link CD:
+##### Dynamic analysis for link *CD*:
 
 ![image](https://user-images.githubusercontent.com/73448401/99856309-97f29d80-2b80-11eb-8bb2-8a16eb6dc156.png)
  
@@ -506,26 +514,53 @@ To create the four bar-linked mechanism for links part models shown in **Figure 
 
 ![image](https://user-images.githubusercontent.com/73448401/99862873-6f27d380-2b93-11eb-92e9-ad1fa3289224.png)
 
-**Figure 19**: Polar load diagram for joint A
+**Figure 18**: Polar load diagram for joint A
 
 ![image](https://user-images.githubusercontent.com/73448401/99862875-718a2d80-2b93-11eb-9a44-1e004af7170c.png)
 
-**Figure 20**:Polar load diagram for joint B
+**Figure 19**:Polar load diagram for joint B
 
 ![image](https://user-images.githubusercontent.com/73448401/99862879-75b64b00-2b93-11eb-8b8c-9ddf8aa3becd.png)
 
-**Figure 21**:Polar load diagram for joint C
+**Figure 20**:Polar load diagram for joint C
 
 ![image](https://user-images.githubusercontent.com/73448401/99862884-79e26880-2b93-11eb-9ef1-99393933b507.png)
 
-**Figure 22**: Polar load diagram for joint D
+**Figure 21**: Polar load diagram for joint D
 
-**Figure 19-Figure 22** shows the polar loads of joints A, B, C and D and is the result of the dynamic analysis of all the forces. It is apparent that **Figure 19** and  **Figure 20** a very similar in creating perhaps most joints having the same magnitude while moving with the constant velocity. The same can be said for joints C and D.
+**Figure 18-Figure 21** shows the polar loads of joints *A, B, C and D* and is the result of the dynamic analysis of all the forces. It is apparent that **Figure 18** and  **Figure 19** a very similar in creating perhaps most joints having the same magnitude while moving with the constant velocity. The same can be said for joints *C* and *D*.
 
 ![image](https://user-images.githubusercontent.com/73448401/99863010-1147bb80-2b94-11eb-8ae5-fbd90a27919b.png)
 
-**Figure 23**:Variation of motor torque
+**Figure 22**:Variation of motor torque
 
-**Figure** above shows the variation when a torque is applied to joints A and B(see **Figure**).At each cycle of the mechanism there is an increase in the torque of the motor and the angular velocity is constant. As the link moves energy is stored in the link and when the energy generated from the torque of the motor is zero, the energy stored in the link returns to the motor and vice versa. This explains the fluctuation of the peaks shown for the torque above.
+**Figure 22** above shows the variation when a torque is applied to joints *A* and *B*(see **Figure 8**).At each cycle of the mechanism there is an increase in the torque of the motor and the angular velocity is constant. As the link moves energy is stored in the link and when the energy generated from the torque of the motor is zero, the energy stored in the link returns to the motor and vice versa. This explains the fluctuation of the peaks shown for the torque above.
 
+## NX results for Two bar link mechanism
+
+![image](https://user-images.githubusercontent.com/73448401/99887259-c46af000-2c3a-11eb-9081-f08622908274.png)
+
+**Figure 23**: Variation of angular velocity
+
+**Figure 23** shows the variation of the link angular velocity, and when compared to the results produced from the MATLAB plot, the results are the same except the that the angular velocity values are positive due to NX not providing negative values.
+
+## NX results for Four-bar link mechanism
+
+![image](https://user-images.githubusercontent.com/73448401/99887271-db114700-2c3a-11eb-8336-d54624f4f1e4.png)
+
+**Figure 24**: Polar load diagram results for joint A in NX
+
+![image](https://user-images.githubusercontent.com/73448401/99887277-e19fbe80-2c3a-11eb-976e-f3b31b7e7e61.png)
+
+**Figure 25**:Polar load diagram results for joint B in NX
+
+![image](https://user-images.githubusercontent.com/73448401/99887278-e5334580-2c3a-11eb-828f-69c60b576130.png)
+
+**Figure 26**:Polar load diagram results for joint C in NX
+
+**Figure 24-Figure 26** show a close resemblance to Figure 19-Figure 21, but the magnitudes shifted slightly indicating an orientation or fault during the NX modelling process.
+
+![image](https://user-images.githubusercontent.com/73448401/99887280-e8c6cc80-2c3a-11eb-8cf8-5cee41551dc1.png)
+
+**Figure 27**:Polar load diagram results for joint D in NX
 
