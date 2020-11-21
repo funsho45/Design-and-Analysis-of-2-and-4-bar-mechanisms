@@ -333,20 +333,6 @@ The forces, as well as the torque acting in both the XY direction in links AB, B
 
 −𝑇1 − 𝑋𝐶𝑟𝑔3 𝑠𝑖𝑛𝜃3 + 𝑌𝑐𝑟𝐺3𝑐𝑜𝑠𝜃3 − 𝑋𝐷 (𝑟3 − 𝑟𝑔3 ) 𝑠𝑖𝑛𝜃3 + 𝑌𝐷(𝑟3 − 𝑟𝐺3 )𝑠𝑖𝑛𝜃3 = 𝐼𝐺3 𝜃̈ 3
 
-### MATRIX
-
-Matrices can now be used to solve the dynamic equations used above. The matrix will be written in the form:
-
-[𝐴] 𝑋 [𝐵] = [X]
-
-Where:
-
-A= is the multiplying variable of the instantaneous geometry of the mechanism
-
-B= is the multiplying variable defines the velocity’s and acceleration links
-
-X= The sum of the multiplying variables A and B and where the plot for the MATLAB results will be obtained from.
-
 ### MATLAB Code of Four-bar link
 
 #### Varable declaration
@@ -417,7 +403,7 @@ yg2= r1* (a1*cos (TH1) -w1^2*sin (TH1))+ rg2* (a2*cos (TH2)-w2^2*sin (TH2));
 xg3= (r3-rg3)*(a3*sin(TH3)+w3^2*cos(TH3));
 yg3= -(r3-rg3)*(a3*cos(TH3)-w3^2*sin(TH3));
 ```
-#### Matrix
+### MATRIX for dynamic analysis
 
 Matrices can now be used to solve the dynamic equations used above. The matrix will be written in the form:
 
