@@ -501,8 +501,31 @@ To create the four bar-linked mechanism for links part models shown in **Figure 
 
 **Figure 17** shows the variation of angular velocity for the 21. It is shown that the mega one begins a lower place than omega one at around 1 rad/sec, with omega two starting above 10 rad/sec. An increase in velocity is noticed in the second angle when in comparison to the first this is due to rapid acceleration. The first angular velocity has lower peak point in the second angular velocity, but the second angular velocity sees a sharp decrease of this peak is reached when compared to the first angular velocity.
 
+## MATLAB results for Four-bar link mechanism
 
 
+![image](https://user-images.githubusercontent.com/73448401/99862873-6f27d380-2b93-11eb-92e9-ad1fa3289224.png)
 
+**Figure 19**: Polar load diagram for joint A
+
+![image](https://user-images.githubusercontent.com/73448401/99862875-718a2d80-2b93-11eb-9a44-1e004af7170c.png)
+
+**Figure 20**:Polar load diagram for joint B
+
+![image](https://user-images.githubusercontent.com/73448401/99862879-75b64b00-2b93-11eb-8b8c-9ddf8aa3becd.png)
+
+**Figure 21**:Polar load diagram for joint C
+
+![image](https://user-images.githubusercontent.com/73448401/99862884-79e26880-2b93-11eb-9ef1-99393933b507.png)
+
+**Figure 22**: Polar load diagram for joint D
+
+**Figure 19-Figure 22** shows the polar loads of joints A, B, C and D and is the result of the dynamic analysis of all the forces. It is apparent that **Figure 19** and  **Figure 20** a very similar in creating perhaps most joints having the same magnitude while moving with the constant velocity. The same can be said for joints C and D.
+
+![image](https://user-images.githubusercontent.com/73448401/99863010-1147bb80-2b94-11eb-8ae5-fbd90a27919b.png)
+
+**Figure 23**:Variation of motor torque
+
+**Figure 23** shows the four-bar mechanism motor torque variation.
 
 
