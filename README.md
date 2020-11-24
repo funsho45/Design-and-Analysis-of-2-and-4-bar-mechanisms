@@ -59,9 +59,13 @@ A mathematical analysis will be performed to obtain equations that describe the 
 
 For the closed loop OABC:
 
+![image](https://user-images.githubusercontent.com/73448401/100119025-56a70a00-2e6e-11eb-91bc-d456395e718b.png)
+
 𝑟1𝑐𝑜𝑠𝜃1 + 𝑟2𝑐𝑜𝑠𝜃2 − 𝑥𝑏 = 0
 
 **Equation 1**
+
+![image](https://user-images.githubusercontent.com/73448401/100119151-75a59c00-2e6e-11eb-93c9-9df44dbefe3d.png)
 
 𝑟1𝑠𝑖𝑛𝜃1 + 𝑟2𝑠𝑖𝑛𝜃2 − 𝑦𝑏 = 0 (2)
 
@@ -69,9 +73,13 @@ For the closed loop OABC:
 
 Solving for both 𝑟1𝑐𝑜𝑠𝜃1 and 𝑟1𝑠𝑖𝑛𝜃1 gives:
 
+![image](https://user-images.githubusercontent.com/73448401/100119176-7d654080-2e6e-11eb-9c01-79e484c8e249.png)
+
 𝑟1𝑐𝑜𝑠𝜃1 = 𝑥𝐵 − 𝑟2𝑐𝑜𝑠𝜃2 (3)
 
 **Equation 3**
+
+![image](https://user-images.githubusercontent.com/73448401/100119209-86561200-2e6e-11eb-9532-f1d3da789f1e.png)
 
 𝑟1𝑠𝑖𝑛𝜃1 = 𝑦𝐵 − 𝑟2 sin 𝜃2
 
@@ -79,11 +87,15 @@ Solving for both 𝑟1𝑐𝑜𝑠𝜃1 and 𝑟1𝑠𝑖𝑛𝜃1 gives:
 
 By squaring and adding up both sides of the equations the mechanisms position can be found:
 
+![image](https://user-images.githubusercontent.com/73448401/100119250-90781080-2e6e-11eb-8bd1-cd5eabe0c6cf.png)
+
 𝐴𝑐𝑜𝑠𝜃2 + 𝐵𝑠𝑖𝑛𝜃2 = 𝐶
 
 **Equation 5**
 
 Where: 
+
+![image](https://user-images.githubusercontent.com/73448401/100119663-041a1d80-2e6f-11eb-9b03-b3ce16b836fe.png)
 
 𝐴 = 2𝑟2 +𝑥2𝐵
 
@@ -93,13 +105,19 @@ Where:
 
 Now 𝜃2  can be calculated:
 
+![image](https://user-images.githubusercontent.com/73448401/100119815-33c92580-2e6f-11eb-8c2d-af240ccc4cb5.png)
+
 𝜃2± = 𝑎𝑡𝑎𝑛2(𝐵, 𝐴) + 𝑎𝑡𝑎𝑛2(±√[1 − (𝐶/𝑅 ) 2 ], 𝐶/𝑅 )
 
 **Equation 6**
 
 Where:
 
+![image](https://user-images.githubusercontent.com/73448401/100119960-58bd9880-2e6f-11eb-8e05-80ac39c5a6e5.png)
+
 𝑅 = √(𝐴2 + 𝐵2)
+
+![image](https://user-images.githubusercontent.com/73448401/100120030-6a9f3b80-2e6f-11eb-9f67-7b9cab23059f.png)
 
 𝜃1± = 𝑎𝑡𝑎𝑛2[(𝑦𝐵 − 𝑟2𝑠𝑖𝑛𝜃2 ), (𝑥𝐵 − 𝑟2𝑐𝑜𝑠𝜃2 )]
 
@@ -109,6 +127,8 @@ Where:
 ### The Velocity Analysis
 
 The angular velocity can now be calculated using both **Equation 1** and **Equation 2** from above differentiating with respect to time:
+
+![image](https://user-images.githubusercontent.com/73448401/100122878-d682a380-2e71-11eb-9697-1a128da94913.png)
 
 dot_𝜃̇1 = 𝑢𝐵𝑐𝑜𝑠𝜃2 + 𝑣𝐵𝑠𝑖𝑛𝜃2/ 𝑟1sin(𝜃2 − 𝜃1)
 
@@ -216,6 +236,8 @@ A mathematical analysis will be performed to obtain equations that describe the 
 
 ### The Position Analysis
 
+![image](https://user-images.githubusercontent.com/73448401/100124456-94f2f800-2e73-11eb-9ed5-5e1d64789433.png)
+
 𝑟1𝑐𝑜𝑠𝜃1 + 𝑟2𝑐𝑜𝑠𝜃2 + 𝑟3𝑐𝑜𝑠𝜃3 + 𝑟4𝑐𝑜𝑠𝜃4 = 0
 
 𝑟1 sin 𝜃1 + 𝑟2𝑠𝑖𝑛𝜃2 + 𝑟3𝑠𝑖𝑛𝜃3 + 𝑟4𝑠𝑖𝑛𝜃4 = 0
@@ -226,11 +248,15 @@ Since 4 = 180:
 
 Giving the equations:
 
+![image](https://user-images.githubusercontent.com/73448401/100124645-d08dc200-2e73-11eb-93af-5b910f106be6.png)
+
 𝑟2𝑐𝑜𝑠𝜃2 = 𝑟4 = 𝑟4 − (𝑟1𝑐𝑜𝑠𝜃1 + 𝑟3𝑐𝑜𝑠𝜃3)
 
 𝑟2𝑠𝑖𝑛𝜃2 = −(𝑟1 sin 𝜃1 + 𝑟3sin 𝜃3)
 
 By squaring and adding up both sides of the equations, the following equations are obtained:
+
+![image](https://user-images.githubusercontent.com/73448401/100124795-02068d80-2e74-11eb-9ef5-11a5751e3b07.png)
 
 𝑟2 2 = 𝑟4 2 − 2𝑟4(𝑟1𝑐𝑜𝑠𝜃1 + 𝑟3𝑐𝑜𝑠𝜃3) +(𝑟1𝑐𝑜𝑠𝜃1 + 𝑟3𝑐𝑜𝑠𝜃3 ) 2
 
@@ -238,9 +264,17 @@ By squaring and adding up both sides of the equations, the following equations a
 
 Therefore: 
 
+![image](https://user-images.githubusercontent.com/73448401/100124868-15195d80-2e74-11eb-88a8-1275a357517d.png)
+
 𝐴 cosθ3 + 𝐵 𝑠𝑖𝑛𝜃3 = 𝐶
 
 Where:
+
+![image](https://user-images.githubusercontent.com/73448401/100124985-2febd200-2e74-11eb-8ece-f081981e3927.png)
+
+![image](https://user-images.githubusercontent.com/73448401/100125012-37ab7680-2e74-11eb-9b61-aba082f121e0.png)
+
+![image](https://user-images.githubusercontent.com/73448401/100125037-3ed28480-2e74-11eb-9a64-322252660747.png)
 
 𝐴 = 𝑐𝑜𝑠𝜃1 − ( 𝑟4 𝑟1 )
 
@@ -250,9 +284,14 @@ Where:
 
 With the solution to equation being:
 
+![image](https://user-images.githubusercontent.com/73448401/100125137-54e04500-2e74-11eb-9c2a-ac616f205a1d.png)
+
+
 𝜃3 ± 𝑎𝑡𝑎𝑛2(𝐵, 𝐴) + 𝑎𝑡𝑎𝑛2 ((± √1 − [( 𝐶 𝑅 ) 2 ]), 𝐶 𝑅 )
 
 Where: 
+
+![image](https://user-images.githubusercontent.com/73448401/100125184-6295ca80-2e74-11eb-8f32-dace3dc13409.png)
 
 𝑅 = √𝐴2 + 𝑏 2
 
@@ -261,17 +300,27 @@ Where:
 For MATLAB to be able to produce results the XY position of each link needs to be calculated.
 Link AB:
 
+![image](https://user-images.githubusercontent.com/73448401/100125593-dcc64f00-2e74-11eb-8671-7e709076dfbe.png)
+
+![image](https://user-images.githubusercontent.com/73448401/100125615-e18b0300-2e74-11eb-9f0d-35ef95533ce7.png)
+
 𝑥𝑔1 = 𝑟𝑔1 𝑐𝑜𝑠𝜃1
 
 𝑦𝑔1 = 𝑟𝑔1 𝑠𝑖𝑛𝜃1
 
 Link BC:
 
+![image](https://user-images.githubusercontent.com/73448401/100125648-e8197a80-2e74-11eb-84c4-0aa959357303.png)
+
+![image](https://user-images.githubusercontent.com/73448401/100125674-efd91f00-2e74-11eb-90c2-6c475f068c19.png)
+
 𝑥𝑔2 = 𝑟1 cos 𝜃1 + 𝑟𝑔2 𝑐𝑜𝑠𝜃2
 
 𝑦𝑔2 = 𝑟1𝑠𝑖𝑛𝜃1 + 𝑟𝑔2 𝑠𝑖𝑛𝜃2
 
 Link CD:
+
+![image](https://user-images.githubusercontent.com/73448401/100125700-f8315a00-2e74-11eb-9053-cbec15da6cfb.png)
 
 𝑥𝑔3 = 𝑟4 − (𝑟3 − 𝑟𝑔3 ) 𝑐𝑜𝑠𝜃3
 
@@ -297,6 +346,8 @@ To calculate the angular acceleration, the derivative of the equations above in 
 
 The force conditions on points A, B, C and D need to be calculated to obtain the centre of mass acceleration:
 
+![image](https://user-images.githubusercontent.com/73448401/100127810-6bd46680-2e77-11eb-8557-570ed67a8912.png)
+
 𝑥̈𝑔1 = −𝑟𝑔1 (𝜃1 ̈ sin 𝜃1 + 𝜃1 ̇ ̈ 2 cos 𝜃1)
 
 𝑦̈𝑔1 = −𝑟𝑔1 (𝜃1 ̈ cos 𝜃1 + 𝜃1 ̇ 2 sin 𝜃1)
@@ -319,6 +370,8 @@ The forces, as well as the torque acting in both the XY direction in links AB, B
 
 **Figure 8**: Link AB
 
+![image](https://user-images.githubusercontent.com/73448401/100129626-af2fd480-2e79-11eb-8da0-c94c4510aa74.png)
+
 𝑋𝐴 + 𝑋𝐵 = 𝑚𝑥̈𝐺1
 
 𝑌𝐴 + 𝑌𝐵 = 𝑚1𝑦̈𝐺1
@@ -331,6 +384,8 @@ The forces, as well as the torque acting in both the XY direction in links AB, B
  
 **Figure 9**: Link BC
 
+![image](https://user-images.githubusercontent.com/73448401/100129716-cd95d000-2e79-11eb-88a4-5b70c99de4b7.png)
+
 −𝑋𝐵 + 𝑋𝐶 = 𝑚2𝑥̈𝐺2
 
 −𝑌𝐵 + 𝑌𝐶 = 𝑚2𝑦̈𝐺2
@@ -342,6 +397,8 @@ The forces, as well as the torque acting in both the XY direction in links AB, B
 ![image](https://user-images.githubusercontent.com/73448401/99856309-97f29d80-2b80-11eb-8bb2-8a16eb6dc156.png)
  
 **Figure 10**: Link CD
+
+![image](https://user-images.githubusercontent.com/73448401/100129775-df777300-2e79-11eb-8fdd-04627c133c17.png)
 
 −𝑋𝐶 + 𝑋𝐷 = 𝑚2𝑥̈𝐺3
 
