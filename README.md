@@ -128,7 +128,9 @@ Where:
 
 The angular velocity can now be calculated using both **Equation 1** and **Equation 2** from above differentiating with respect to time:
 
-![image](https://user-images.githubusercontent.com/73448401/100122878-d682a380-2e71-11eb-9697-1a128da94913.png)
+![image](https://user-images.githubusercontent.com/73448401/100165317-e0c49200-2eb1-11eb-85bc-64044486d59c.png)
+
+![image](https://user-images.githubusercontent.com/73448401/100165240-ad820300-2eb1-11eb-8106-a10f8a3f3e08.png)
 
 dot_𝜃̇1 = 𝑢𝐵𝑐𝑜𝑠𝜃2 + 𝑣𝐵𝑠𝑖𝑛𝜃2/ 𝑟1sin(𝜃2 − 𝜃1)
 
@@ -242,6 +244,8 @@ A mathematical analysis will be performed to obtain equations that describe the 
 
 𝑟1 sin 𝜃1 + 𝑟2𝑠𝑖𝑛𝜃2 + 𝑟3𝑠𝑖𝑛𝜃3 + 𝑟4𝑠𝑖𝑛𝜃4 = 0
 
+![image](https://user-images.githubusercontent.com/73448401/100165140-65fb7700-2eb1-11eb-9b28-99bb58bfe544.png)
+
 Since 4 = 180:
 
 𝑐𝑜𝑠𝜃4 = −1 and 𝑠𝑖𝑛𝜃4 = 0
@@ -322,6 +326,8 @@ Link CD:
 
 ![image](https://user-images.githubusercontent.com/73448401/100125700-f8315a00-2e74-11eb-9053-cbec15da6cfb.png)
 
+![image](https://user-images.githubusercontent.com/73448401/100164008-dead0400-2eae-11eb-9630-2938f7528182.png)
+
 𝑥𝑔3 = 𝑟4 − (𝑟3 − 𝑟𝑔3 ) 𝑐𝑜𝑠𝜃3
 
 𝑦𝑔3 = − (𝑟3 − 𝑟𝑔3 ) 𝑠𝑖𝑛𝜃3
@@ -330,13 +336,20 @@ Link CD:
 
 To analyse the angular velocity to the derivative of Equation 3 and Equation 4 are carried out, giving the following:
 
+![image](https://user-images.githubusercontent.com/73448401/100148318-7ea96400-2e94-11eb-8a2f-94e31223e3b1.png)
+
 𝜃̇ 3 = 𝜃̇ 1 = 𝑟1 sin(𝜃1 − 𝜃2) 𝑟3sin(𝜃2 − 𝜃3)
+
+![image](https://user-images.githubusercontent.com/73448401/100148697-01322380-2e95-11eb-8467-ac4cb338321a.png)
 
 𝜃̇ 2 = 𝜃̇ 1 = 𝑟1 sin(𝜃3 − 𝜃1 𝑟2sin(𝜃2 − 𝜃3)
 
 ### The Acceleration Analysis
 
 To calculate the angular acceleration, the derivative of the equations above in the velocity analysis can be taken to obtain:
+
+![image](https://user-images.githubusercontent.com/73448401/100163701-2c753c80-2eae-11eb-8716-eb3fa682eabb.png)
+
 
 𝜃3 ̈ = 𝜃̇ 1 𝑟1 𝑟3 ̈ cos(𝜃1 − 𝜃2 ) sin(𝜃2 − 𝜃3 )(𝜃̇ 1 − 𝜃̇ 2) − sin(𝜃1 − 𝜃2 ) cos(𝜃2 − 𝜃3)(𝜃̇ 2 − 𝜃3) sin2(𝜃2 − 𝜃3 )
 
@@ -346,7 +359,7 @@ To calculate the angular acceleration, the derivative of the equations above in 
 
 The force conditions on points A, B, C and D need to be calculated to obtain the centre of mass acceleration:
 
-![image](https://user-images.githubusercontent.com/73448401/100127810-6bd46680-2e77-11eb-8557-570ed67a8912.png)
+![image](https://user-images.githubusercontent.com/73448401/100166215-123e5d00-2eb4-11eb-9ca9-40c703da9856.png)
 
 𝑥̈𝑔1 = −𝑟𝑔1 (𝜃1 ̈ sin 𝜃1 + 𝜃1 ̇ ̈ 2 cos 𝜃1)
 
