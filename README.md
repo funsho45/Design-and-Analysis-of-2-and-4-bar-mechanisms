@@ -61,13 +61,10 @@ For the closed loop OABC:
 
 ![image](https://user-images.githubusercontent.com/73448401/100119025-56a70a00-2e6e-11eb-91bc-d456395e718b.png)
 
-𝑟1𝑐𝑜𝑠𝜃1 + 𝑟2𝑐𝑜𝑠𝜃2 − 𝑥𝑏 = 0
 
 **Equation 1**
 
 ![image](https://user-images.githubusercontent.com/73448401/100119151-75a59c00-2e6e-11eb-93c9-9df44dbefe3d.png)
-
-𝑟1𝑠𝑖𝑛𝜃1 + 𝑟2𝑠𝑖𝑛𝜃2 − 𝑦𝑏 = 0 (2)
 
 **Equation 2**
 
@@ -75,13 +72,9 @@ Solving for both 𝑟1𝑐𝑜𝑠𝜃1 and 𝑟1𝑠𝑖𝑛𝜃1 gives:
 
 ![image](https://user-images.githubusercontent.com/73448401/100119176-7d654080-2e6e-11eb-9c01-79e484c8e249.png)
 
-𝑟1𝑐𝑜𝑠𝜃1 = 𝑥𝐵 − 𝑟2𝑐𝑜𝑠𝜃2 (3)
-
 **Equation 3**
 
 ![image](https://user-images.githubusercontent.com/73448401/100119209-86561200-2e6e-11eb-9532-f1d3da789f1e.png)
-
-𝑟1𝑠𝑖𝑛𝜃1 = 𝑦𝐵 − 𝑟2 sin 𝜃2
 
 **Equation 4**
 
@@ -89,25 +82,15 @@ By squaring and adding up both sides of the equations the mechanisms position ca
 
 ![image](https://user-images.githubusercontent.com/73448401/100119250-90781080-2e6e-11eb-8bd1-cd5eabe0c6cf.png)
 
-𝐴𝑐𝑜𝑠𝜃2 + 𝐵𝑠𝑖𝑛𝜃2 = 𝐶
-
 **Equation 5**
 
 Where: 
 
 ![image](https://user-images.githubusercontent.com/73448401/100119663-041a1d80-2e6f-11eb-9b03-b3ce16b836fe.png)
 
-𝐴 = 2𝑟2 +𝑥2𝐵
-
-𝐵 = 2𝑟2𝑦𝐵
-
-𝐶 = 𝑟2 2 + 𝑥𝐵 2 + 𝑦𝐵 2 = −𝑟1 2
-
 Now 𝜃2  can be calculated:
 
 ![image](https://user-images.githubusercontent.com/73448401/100119815-33c92580-2e6f-11eb-8c2d-af240ccc4cb5.png)
-
-𝜃2± = 𝑎𝑡𝑎𝑛2(𝐵, 𝐴) + 𝑎𝑡𝑎𝑛2(±√[1 − (𝐶/𝑅 ) 2 ], 𝐶/𝑅 )
 
 **Equation 6**
 
@@ -115,11 +98,7 @@ Where:
 
 ![image](https://user-images.githubusercontent.com/73448401/100119960-58bd9880-2e6f-11eb-8e05-80ac39c5a6e5.png)
 
-𝑅 = √(𝐴2 + 𝐵2)
-
 ![image](https://user-images.githubusercontent.com/73448401/100120030-6a9f3b80-2e6f-11eb-9f67-7b9cab23059f.png)
-
-𝜃1± = 𝑎𝑡𝑎𝑛2[(𝑦𝐵 − 𝑟2𝑠𝑖𝑛𝜃2 ), (𝑥𝐵 − 𝑟2𝑐𝑜𝑠𝜃2 )]
 
 **Equation 7**
 
@@ -131,10 +110,6 @@ The angular velocity can now be calculated using both **Equation 1** and **Equat
 ![image](https://user-images.githubusercontent.com/73448401/100165317-e0c49200-2eb1-11eb-85bc-64044486d59c.png)
 
 ![image](https://user-images.githubusercontent.com/73448401/100165240-ad820300-2eb1-11eb-8106-a10f8a3f3e08.png)
-
-dot_𝜃̇1 = 𝑢𝐵𝑐𝑜𝑠𝜃2 + 𝑣𝐵𝑠𝑖𝑛𝜃2/ 𝑟1sin(𝜃2 − 𝜃1)
-
-dot_𝜃̇2 = 𝑢𝐵𝑐𝑜𝑠𝜃1 + 𝑣𝐵𝑠𝑖𝑛𝜃1/ 𝑟2 sin(𝜃1 − 𝜃2 )
 
 ### MATLAB Code of Two bar link
 
@@ -240,37 +215,19 @@ A mathematical analysis will be performed to obtain equations that describe the 
 
 ![image](https://user-images.githubusercontent.com/73448401/100124456-94f2f800-2e73-11eb-9ed5-5e1d64789433.png)
 
-𝑟1𝑐𝑜𝑠𝜃1 + 𝑟2𝑐𝑜𝑠𝜃2 + 𝑟3𝑐𝑜𝑠𝜃3 + 𝑟4𝑐𝑜𝑠𝜃4 = 0
-
-𝑟1 sin 𝜃1 + 𝑟2𝑠𝑖𝑛𝜃2 + 𝑟3𝑠𝑖𝑛𝜃3 + 𝑟4𝑠𝑖𝑛𝜃4 = 0
-
 ![image](https://user-images.githubusercontent.com/73448401/100165140-65fb7700-2eb1-11eb-9b28-99bb58bfe544.png)
-
-Since 4 = 180:
-
-𝑐𝑜𝑠𝜃4 = −1 and 𝑠𝑖𝑛𝜃4 = 0
 
 Giving the equations:
 
 ![image](https://user-images.githubusercontent.com/73448401/100124645-d08dc200-2e73-11eb-93af-5b910f106be6.png)
 
-𝑟2𝑐𝑜𝑠𝜃2 = 𝑟4 = 𝑟4 − (𝑟1𝑐𝑜𝑠𝜃1 + 𝑟3𝑐𝑜𝑠𝜃3)
-
-𝑟2𝑠𝑖𝑛𝜃2 = −(𝑟1 sin 𝜃1 + 𝑟3sin 𝜃3)
-
 By squaring and adding up both sides of the equations, the following equations are obtained:
 
 ![image](https://user-images.githubusercontent.com/73448401/100124795-02068d80-2e74-11eb-9ef5-11a5751e3b07.png)
 
-𝑟2 2 = 𝑟4 2 − 2𝑟4(𝑟1𝑐𝑜𝑠𝜃1 + 𝑟3𝑐𝑜𝑠𝜃3) +(𝑟1𝑐𝑜𝑠𝜃1 + 𝑟3𝑐𝑜𝑠𝜃3 ) 2
-
-𝑟2 2 = 𝑟4 2 − 2𝑟1𝑟4 cos 𝜃1 − 2𝑟3𝑟4𝑐𝑜𝑠𝜃3 + 𝑟1 2 𝑐𝑜𝑠 2𝜃1 + 2𝑟1𝑟3𝑐𝑜𝑠𝜃1𝑐𝑜𝑠𝜃3 + 𝑟3 2 cos2 𝜃3 + 𝑟1 2 𝑐𝑜𝑠 2𝜃1 + 2𝑟1𝑟3𝑠𝑖𝑛𝜃1𝑠𝑖𝑛𝜃3 + 𝑟3 2 sin2 𝜃3
-
 Therefore: 
 
 ![image](https://user-images.githubusercontent.com/73448401/100124868-15195d80-2e74-11eb-88a8-1275a357517d.png)
-
-𝐴 cosθ3 + 𝐵 𝑠𝑖𝑛𝜃3 = 𝐶
 
 Where:
 
@@ -280,24 +237,14 @@ Where:
 
 ![image](https://user-images.githubusercontent.com/73448401/100125037-3ed28480-2e74-11eb-9a64-322252660747.png)
 
-𝐴 = 𝑐𝑜𝑠𝜃1 − ( 𝑟4 𝑟1 )
-
-𝐵 = 𝑠𝑖𝑛𝜃1
-
-𝐶 = ( 𝑟4 𝑟3 ) 𝑐𝑜𝑠𝜃1 − (𝑟1 2 − 𝑟2 2 + 𝑟3 2 + 𝑟4 2 ) (2𝑟1𝑟3)
-
 With the solution to equation being:
 
 ![image](https://user-images.githubusercontent.com/73448401/100125137-54e04500-2e74-11eb-9c2a-ac616f205a1d.png)
-
-
-𝜃3 ± 𝑎𝑡𝑎𝑛2(𝐵, 𝐴) + 𝑎𝑡𝑎𝑛2 ((± √1 − [( 𝐶 𝑅 ) 2 ]), 𝐶 𝑅 )
 
 Where: 
 
 ![image](https://user-images.githubusercontent.com/73448401/100125184-6295ca80-2e74-11eb-8f32-dace3dc13409.png)
 
-𝑅 = √𝐴2 + 𝑏 2
 
 ### Link Position 
 
@@ -308,19 +255,11 @@ Link AB:
 
 ![image](https://user-images.githubusercontent.com/73448401/100125615-e18b0300-2e74-11eb-9f0d-35ef95533ce7.png)
 
-𝑥𝑔1 = 𝑟𝑔1 𝑐𝑜𝑠𝜃1
-
-𝑦𝑔1 = 𝑟𝑔1 𝑠𝑖𝑛𝜃1
-
 Link BC:
 
 ![image](https://user-images.githubusercontent.com/73448401/100125648-e8197a80-2e74-11eb-84c4-0aa959357303.png)
 
 ![image](https://user-images.githubusercontent.com/73448401/100125674-efd91f00-2e74-11eb-90c2-6c475f068c19.png)
-
-𝑥𝑔2 = 𝑟1 cos 𝜃1 + 𝑟𝑔2 𝑐𝑜𝑠𝜃2
-
-𝑦𝑔2 = 𝑟1𝑠𝑖𝑛𝜃1 + 𝑟𝑔2 𝑠𝑖𝑛𝜃2
 
 Link CD:
 
@@ -328,21 +267,13 @@ Link CD:
 
 ![image](https://user-images.githubusercontent.com/73448401/100164008-dead0400-2eae-11eb-9630-2938f7528182.png)
 
-𝑥𝑔3 = 𝑟4 − (𝑟3 − 𝑟𝑔3 ) 𝑐𝑜𝑠𝜃3
-
-𝑦𝑔3 = − (𝑟3 − 𝑟𝑔3 ) 𝑠𝑖𝑛𝜃3
-
 ### The Velocity analysis
 
 To analyse the angular velocity to the derivative of Equation 3 and Equation 4 are carried out, giving the following:
 
 ![image](https://user-images.githubusercontent.com/73448401/100148318-7ea96400-2e94-11eb-8a2f-94e31223e3b1.png)
 
-𝜃̇ 3 = 𝜃̇ 1 = 𝑟1 sin(𝜃1 − 𝜃2) 𝑟3sin(𝜃2 − 𝜃3)
-
 ![image](https://user-images.githubusercontent.com/73448401/100148697-01322380-2e95-11eb-8467-ac4cb338321a.png)
-
-𝜃̇ 2 = 𝜃̇ 1 = 𝑟1 sin(𝜃3 − 𝜃1 𝑟2sin(𝜃2 − 𝜃3)
 
 ### The Acceleration Analysis
 
@@ -351,27 +282,11 @@ To calculate the angular acceleration, the derivative of the equations above in 
 ![image](https://user-images.githubusercontent.com/73448401/100163701-2c753c80-2eae-11eb-8716-eb3fa682eabb.png)
 
 
-𝜃3 ̈ = 𝜃̇ 1 𝑟1 𝑟3 ̈ cos(𝜃1 − 𝜃2 ) sin(𝜃2 − 𝜃3 )(𝜃̇ 1 − 𝜃̇ 2) − sin(𝜃1 − 𝜃2 ) cos(𝜃2 − 𝜃3)(𝜃̇ 2 − 𝜃3) sin2(𝜃2 − 𝜃3 )
-
-𝜃2 ̈ = 𝜃̇ 1 𝑟1 𝑟2 ̈ cos(𝜃3 − 𝜃1 ) sin(𝜃2 − 𝜃3 )(𝜃̇ 3 − 𝜃̇ 1) − sin(𝜃3 − 𝜃1 ) cos(𝜃2 − 𝜃3)(𝜃̇ 2 − 𝜃3) sin2(𝜃2 − 𝜃3 )
-
 ### Centre of mass acceleration
 
 The force conditions on points A, B, C and D need to be calculated to obtain the centre of mass acceleration:
 
 ![image](https://user-images.githubusercontent.com/73448401/100166215-123e5d00-2eb4-11eb-9ca9-40c703da9856.png)
-
-𝑥̈𝑔1 = −𝑟𝑔1 (𝜃1 ̈ sin 𝜃1 + 𝜃1 ̇ ̈ 2 cos 𝜃1)
-
-𝑦̈𝑔1 = −𝑟𝑔1 (𝜃1 ̈ cos 𝜃1 + 𝜃1 ̇ 2 sin 𝜃1)
-
-𝑥̈𝑔2 = −𝑟1(𝜃1 ̈ cos 𝜃1 + 𝜃1 ̇ 2 cos 𝜃1) − 𝑟𝑔2(𝜃̈ 2 𝑠𝑖𝑛 𝜃2 + 𝜃1 ̇ 2 cos 𝜃2)
-
-𝑦̈𝑔2 = −𝑟1(𝜃1 ̈ cos 𝜃1 + 𝜃1 ̇ 2 sin 𝜃1) − 𝑟𝑔2(𝜃̈ 2 𝑐𝑜𝑠 𝜃2 + 𝜃1 ̇ 2 sin 𝜃2)
-
-𝑥̈𝑔3 = (𝑟3 − 𝑟𝑔3 )(𝜃̈ 3𝑠𝑖𝑛𝜃3 + 𝜃3 ̇ 2 𝑐𝑜𝑠𝜃3)
-
-𝑥̈𝑔3 = (𝑟3 − 𝑟𝑔3 )(𝜃̈ 3𝑠𝑖𝑛𝜃3 + 𝜃3 ̇ 2 𝑐𝑜𝑠𝜃3)
 
 ### Dynamic Analysis 
 
@@ -385,12 +300,6 @@ The forces, as well as the torque acting in both the XY direction in links AB, B
 
 ![image](https://user-images.githubusercontent.com/73448401/100129626-af2fd480-2e79-11eb-8da0-c94c4510aa74.png)
 
-𝑋𝐴 + 𝑋𝐵 = 𝑚𝑥̈𝐺1
-
-𝑌𝐴 + 𝑌𝐵 = 𝑚1𝑦̈𝐺1
-
-𝑇𝑚 + 𝑋𝐴𝑟𝐺1 𝑠𝑖𝑛𝜃1 − 𝑌𝐴𝑟𝐺1 𝑐𝑜𝑠𝜃1 − 𝑋𝐵(𝑟1 − 𝑟𝐺1 )𝑠𝑖𝑛𝜃1 + 𝑌𝐵(𝑟1 − 𝑟𝐺1 )𝑐𝑜𝑠𝜃1 = 𝐼𝐺1 𝜃̈ 1
-
 ### Dynamic analysis for link *BC*:
 
 ![image](https://user-images.githubusercontent.com/73448401/99856304-94f7ad00-2b80-11eb-8522-68fdc204fcfd.png)
@@ -399,12 +308,6 @@ The forces, as well as the torque acting in both the XY direction in links AB, B
 
 ![image](https://user-images.githubusercontent.com/73448401/100129716-cd95d000-2e79-11eb-88a4-5b70c99de4b7.png)
 
-−𝑋𝐵 + 𝑋𝐶 = 𝑚2𝑥̈𝐺2
-
-−𝑌𝐵 + 𝑌𝐶 = 𝑚2𝑦̈𝐺2
-
-−𝑋𝐵𝑟𝐺2 𝑠𝑖𝑛𝜃2 + 𝑌𝐵𝑟𝐺2 𝑐𝑜𝑠𝜃2 − 𝑋𝑐(𝑟2 − 𝑟𝐺2 )𝑠𝑖𝑛𝜃2 + 𝑌𝑐(𝑟2 − 𝑟𝐺2 )𝑐𝑜𝑠𝜃2 = 𝐼𝐺1 𝜃̈ 2
-
 ### Dynamic analysis for link *CD*:
 
 ![image](https://user-images.githubusercontent.com/73448401/99856309-97f29d80-2b80-11eb-8bb2-8a16eb6dc156.png)
@@ -412,12 +315,6 @@ The forces, as well as the torque acting in both the XY direction in links AB, B
 **Figure 10**: Link CD
 
 ![image](https://user-images.githubusercontent.com/73448401/100129775-df777300-2e79-11eb-8fdd-04627c133c17.png)
-
-−𝑋𝐶 + 𝑋𝐷 = 𝑚2𝑥̈𝐺3
-
-−𝑌𝐶 + 𝑌𝐷 = 𝑚2𝑦̈𝐺3
-
-−𝑇1 − 𝑋𝐶𝑟𝑔3 𝑠𝑖𝑛𝜃3 + 𝑌𝑐𝑟𝐺3𝑐𝑜𝑠𝜃3 − 𝑋𝐷 (𝑟3 − 𝑟𝑔3 ) 𝑠𝑖𝑛𝜃3 + 𝑌𝐷(𝑟3 − 𝑟𝐺3 )𝑠𝑖𝑛𝜃3 = 𝐼𝐺3 𝜃̈ 3
 
 ### MATLAB Code of Four-bar link
 
